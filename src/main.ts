@@ -24,11 +24,14 @@ export class StringOnlyPipePipe implements PipeTransform {
   selector: 'my-app',
   imports: [StringOnlyPipePipe],
   template: `
-@if(testValue.accessible?.isAccessible === true) {
-  <p>
-{{ testValue.accessible.value | stringOnlyPipe }} <span></span>
-</p>
-}
+    @if(testValue.accessible?.isAccessible === true) {
+      <p>
+      {{ testValue.accessible.value | stringOnlyPipe }} <span></span>
+      </p>
+    } 
+    <p>
+    {{ testValue.accessible?.value | stringOnlyPipe }} <span></span>
+    </p>
 `,
 })
 export class AppComponent {
